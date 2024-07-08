@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="TaskPaneApp">
+  <Id>5a83aed5-3ac7-405b-9253-74ac4c63fddd</Id> <!-- Replace with a valid GUID -->
+  <Version>1.0.0.0</Version>
+  <ProviderName>Scrapevine</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Scrapevine"/>
+  <Description DefaultValue="Your Add-in Description"/>
+  <IconUrl DefaultValue="https://localhost:3000/assets/svlogo.png"/>
+  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/svlogo.png"/>
+  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+
+  <Hosts>
+    <Host Name="Workbook"/>
+  </Hosts>
+
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="SharedRuntime"/>
+    </Sets>
+  </Requirements>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <WebApplicationInfo>
+    <Id>c7d14f54-16b2-4d32-a92f-3c3e9b4e4d5b</Id> <!-- Replace with a valid GUID -->
+    <Resource>api://your-resource-id</Resource>
+    <Scopes>
+      <Scope>Files.ReadWrite.All</Scope>
+      <Scope>Sites.ReadWrite.All</Scope>
+      <Scope>offline_access</Scope>
+    </Scopes>
+  </WebApplicationInfo>
+</OfficeApp>

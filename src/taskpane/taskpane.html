@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrapevine Taskpane</title>
+    <link rel="stylesheet" href="./taskpane.css">
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="../../assets/svlogo.png" alt="Scrapevine Logo" class="logo">
+    </div>
+    <div class="status-container">
+        <code id="code-block">status: operational</code>
+    </div>
+
+    <div class="input-container">
+        <div class="input-field-wrapper">
+            <div class="dropdown-container">
+                <div class="dropdown">
+                    <label for="searchInput" class="visually-hidden">Search Platform</label>
+                    <input type="text" id="searchInput" placeholder="Shopee" autocomplete="off" class="input-box">
+                    <div id="dropdownList" class="dropdown-content">
+                        <div onclick="selectOption('Lazada')">Lazada</div>
+                        <div onclick="selectOption('Shopee')">Shopee</div>
+                        <div onclick="selectOption('Lovebonito')">Lovebonito</div>
+                        <div onclick="selectOption('Staccato')">Staccato</div>
+                        <div onclick="selectOption('Daiso')">Daiso</div>
+                        <div onclick="selectOption('Amazon')">Amazon</div>
+                    </div>
+                </div>
+            </div>
+            <div class="input-field-container">
+                <label for="additionalInput" class="visually-hidden">Additional Input</label>
+                <div class="input-wrapper">
+                    <input type="text" id="additionalInput" placeholder="Blue Dress" autocomplete="off" class="input-box" maxlength="32">
+                    <img src="../../assets/search.png" alt="Search" class="search-icon">
+                </div>
+            </div>
+        </div>
+        <div class="radio-container">
+            <div class="radio-item">
+                <input type="radio" id="current-sheet" name="sheet-option" value="current" checked>
+                <label for="current-sheet">Current Sheet</label>
+            </div>
+            <div class="radio-item">
+                <input type="radio" id="new-sheet" name="sheet-option" value="new">
+                <label for="new-sheet">Add New Sheet</label>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="rectangle-container">
+        <div class="rectangle-with-label">
+            <div class="rectangle"><span>-</span></div>
+            <span>Minimum</span>
+        </div>
+        <div class="rectangle-with-label">
+            <div class="rectangle"><span>-</span></div>
+            <span>Average</span>
+        </div>
+        <div class="rectangle-with-label">
+            <div class="rectangle"><span>-</span></div>
+            <span>Maximum</span>
+        </div>
+    </div>
+    
+    <div class="analysis-container">
+        <h3>Scrapevine AI Analyst</h3>
+        <p>This is a detailed analysis of AI products based on recent market trends and consumer preferences.</p>
+    </div>
+
+    <div class="footer">
+        <p><b>scrapevine version 3.0.1</b></p>
+        <code>Developed by Gepeto</code>
+    </div>
+
+    <!-- Include your script at the end of the body to ensure Office.js is loaded first -->
+    <script src="./taskpane.js"></script>
+</body>
+</html>
